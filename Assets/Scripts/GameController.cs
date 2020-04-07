@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 
     public Button startButton;
     public Button restartButton;
+    public Button quitButton;
 
     public GameObject endPosition;
     public GameObject ball;
@@ -29,6 +30,7 @@ public class GameController : MonoBehaviour
     {
         startButton.onClick.AddListener(startParabolicMovement);
         restartButton.onClick.AddListener(restartSimulation);
+        quitButton.onClick.AddListener(quitGame);
         maxRange = 0;
         distance = 0;
 
@@ -38,6 +40,10 @@ public class GameController : MonoBehaviour
     void Update()
     {
         
+    }
+    void quitGame()
+    {
+        Application.Quit();
     }
 
     void startParabolicMovement()
